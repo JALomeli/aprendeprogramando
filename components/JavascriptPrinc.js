@@ -1,6 +1,6 @@
 import React from "react";
-import { Accordion } from 'flowbite-react';
-import Link from 'next/link';
+import { Accordion } from "flowbite-react";
+import Link from "next/link";
 
 export default function ListaModulos() {
   return (
@@ -92,8 +92,8 @@ export default function ListaModulos() {
                   <li>Igualdad (==)</li>
                   <li>Igualdad Estricta (===)</li>
                   <li>Diferencia (!= o !==)</li>
-                  <li>{'Mayor que (>)'}</li>
-                  <li>{'Menor que (<)'}</li>
+                  <li>{"Mayor que (>)"}</li>
+                  <li>{"Menor que (<)"}</li>
                 </ul>
               </div>
               <div>
