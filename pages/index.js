@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Home() {
+  
   return (
     <main className="relative">
       <div className="fixed inset-0">
@@ -13,9 +14,7 @@ export default function Home() {
           className="absolute inset-0 object-cover w-full h-full opacity-10"
         />
       </div>
-      <div className="relative z-10">
 
-      </div>
       <div className="relative z-10">
         <Header />
         <div className="flex flex-col justify-center items-center min-h-screen min-w-screen text-center mt-auto mb-auto">
@@ -38,19 +37,15 @@ export default function Home() {
             conceptos más básicos hasta habilidades avanzadas de programación.
           </p>
           <div className="flex justify-center">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded mr-4">
-              Botón 1
+            <button className="bg-green-500 text-white px-8 py-4 rounded mr-4">
+              Empezar
             </button>
-            <button className="bg-green-500 text-white px-4 py-2 rounded">
-              Botón 2
-            </button>
+
           </div>
         </div>
         <Footer />
       </div>
-      <div className="relative z-10">
-        
-      </div>
+
     </main>
   );
 }
