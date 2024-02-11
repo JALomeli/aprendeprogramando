@@ -46,7 +46,7 @@ export default function ListaModulos() {
                 </p>
                 <p>Por ejemplo:</p>
                 <pre className="bg-gray-100 p-4 rounded-md">
-                  <div>var nombre = "Juan";</div>
+                <code>var nombre = &apos;Juan&apos;;</code>
                 </pre>
               </div>
               <div>
