@@ -37,10 +37,11 @@ export default function Home() {
             conceptos más básicos hasta habilidades avanzadas de programación.
           </p>
           <div className="flex justify-center">
-            <button className="bg-green-500 text-white px-8 py-4 rounded mr-4">
+            <a href="/Modulos">
+            <button className="bg-green-500 text-white px-8 py-4 rounded mr-4" >
               Empezar
             </button>
-
+            </a>
           </div>
         </div>
         <Footer />
