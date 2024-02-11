@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Link from 'next/link';
+import Image from "next/image";
 
 export default function Home() {
-  
   return (
     <main className="relative">
       <div className="fixed inset-0">
@@ -37,11 +38,11 @@ export default function Home() {
             conceptos más básicos hasta habilidades avanzadas de programación.
           </p>
           <div className="flex justify-center">
-            <a href="/Modulos">
+            <Link href="/Modulos">
             <button className="bg-green-500 text-white px-8 py-4 rounded mr-4" >
               Empezar
             </button>
-            </a>
+            </Link>
           </div>
         </div>
         <Footer />

@@ -1,12 +1,13 @@
 import React from "react";
 import { Accordion } from 'flowbite-react';
+import Link from 'next/link';
 
 export default function ListaModulos() {
   return (
     <main className="relative">
       <div className="flex flex-col bg-white justify-center items-center min-h-screen min-w-screen text-center m-5 p-5">
         <h1 className="text-4xl font-bold mb-4">Javascript Lecciones Principiantes</h1>
-      <img
+        <img
           src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
           alt="Imagen de fondo"
           className="h-80 w-80 p-4 m-4"
@@ -27,12 +28,11 @@ export default function ListaModulos() {
                   A lo largo de los años, JavaScript ha evolucionado y se ha convertido en uno de los lenguajes de programación más populares y versátiles, utilizado no solo en el desarrollo web, sino también en la creación de aplicaciones móviles, servidores y más.
                 </p>
               </div>
-              <a href="/">
-            <button className="bg-green-500 text-white px-8 py-4 rounded m-2 " >
-              Examen
-            </button>
-            </a>
-
+              <Link href="/">
+                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
+                  Examen
+                </button>
+              </Link>
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
@@ -63,12 +63,11 @@ export default function ListaModulos() {
                   Puedes utilizar el operador <code>typeof</code> para determinar el tipo de dato de una variable.
                 </p>
               </div>
-              <a href="/">
-            <button className="bg-green-500 text-white px-8 py-4 rounded m-2" >
-              Examen
-            </button>
-            </a>
-
+              <Link href="/">
+                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
+                  Examen
+                </button>
+              </Link>
             </Accordion.Content>
           </Accordion.Panel>
 
@@ -106,12 +105,11 @@ export default function ListaModulos() {
                   <li>NOT lógico (!)</li>
                 </ul>
               </div>
-              <a href="/">
-            <button className="bg-green-500 text-white px-8 py-4 rounded m-2" >
-              Examen
-            </button>
-            </a>
-
+              <Link href="/">
+                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
+                  Examen
+                </button>
+              </Link>
             </Accordion.Content>
           </Accordion.Panel>
           
@@ -130,14 +128,12 @@ export default function ListaModulos() {
                 <h2 className="text-2xl font-bold mb-2">Sentencia switch</h2>
                 <p>La sentencia `switch` se utiliza para seleccionar una de muchas partes de código para ser ejecutada.</p>
               </div>
-              <a href="/">
-            <button className="bg-green-500 text-white px-8 py-4 rounded m-2" >
-              Examen
-            </button>
-            </a>
-
+              <Link href="/">
+                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
+                  Examen
+                </button>
+              </Link>
             </Accordion.Content>
-        
           </Accordion.Panel>
           
           <Accordion.Panel>
@@ -155,21 +151,20 @@ export default function ListaModulos() {
                 <h2 className="text-2xl font-bold mb-2">Devolver valores</h2>
                 <p>Las funciones pueden devolver un valor utilizando la palabra clave `return` seguida del valor que se desea devolver.</p>
               </div>
-              <a href="/">
-            <button className="bg-green-500 text-white px-8 py-4 rounded m-2" >
-              Examen
-            </button>
-            </a>
-
+              <Link href="/">
+                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
+                  Examen
+                </button>
+              </Link>
             </Accordion.Content>
           </Accordion.Panel>
           
         </Accordion>
-        <a href="/">
-            <button className="bg-green-500 text-white px-8 py-4 rounded m-2 " >
-              Recursos adicionales
-            </button>
-            </a>
+        <Link href="/">
+          <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
+            Recursos adicionales
+          </button>
+        </Link>
       </div>
     </main>
   );
