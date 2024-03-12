@@ -160,7 +160,7 @@ export default function ListaModulos() {
           </Accordion.Panel>
           
         </Accordion>
-        <Link href="/">
+        <Link href="/JavascriptExtra">
           <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
             Recursos adicionales
           </button>
