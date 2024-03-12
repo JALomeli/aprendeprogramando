@@ -1,8 +1,9 @@
 import React from "react";
-import { Accordion } from "flowbite-react";
+import { Accordion, Modal } from "flowbite-react";
 import Link from "next/link";
+import JsExamen1 from "../components/JsExamen1";
 
-export default function ListaModulos() {
+export default function JavascriptPrinc() {
   return (
     <main className="relative">
       <div className="flex flex-col bg-white justify-center items-center min-h-screen min-w-screen text-center m-5 p-5">
@@ -13,7 +14,7 @@ export default function ListaModulos() {
           className="h-80 w-80 p-4 m-4"
         />
         <Accordion className="w-full max-w-4xl">
-          <Accordion.Panel>
+        <Accordion.Panel>
             <Accordion.Title>Lección 1: Introducción a JavaScript</Accordion.Title>
             <Accordion.Content>
               <div>
@@ -28,11 +29,7 @@ export default function ListaModulos() {
                   A lo largo de los años, JavaScript ha evolucionado y se ha convertido en uno de los lenguajes de programación más populares y versátiles, utilizado no solo en el desarrollo web, sino también en la creación de aplicaciones móviles, servidores y más.
                 </p>
               </div>
-              <Link href="/">
-                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
-                  Examen
-                </button>
-              </Link>
+<JsExamen1 />
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
@@ -160,6 +157,7 @@ export default function ListaModulos() {
           </Accordion.Panel>
           
         </Accordion>
+        
         <Link href="/JavascriptExtra">
           <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
             Recursos adicionales

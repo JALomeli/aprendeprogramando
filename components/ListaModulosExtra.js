@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-export default function ListaModulos() {
+export default function ListaModulosExtra() {
   const products = [
     {
       id: 9,

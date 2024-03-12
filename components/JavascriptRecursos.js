@@ -2,7 +2,7 @@ import React from "react";
 import { Accordion } from "flowbite-react";
 import Link from "next/link";
 
-export default function ListaModulos() {
+export default function JavascriptRecursos() {
   return (
     <main className="relative">
       <div className="flex flex-col bg-white justify-center items-center min-h-screen min-w-screen text-center m-5 p-5">
