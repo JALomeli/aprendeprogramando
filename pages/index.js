@@ -1,10 +1,8 @@
-import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
-import Image from "next/image";
 
-export default function Home() {
+export default function index() {
   return (
     <main className="relative">
       <div className="fixed inset-0">
@@ -39,15 +37,14 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <Link href="/Modulos">
-            <button className="bg-green-500 text-white px-8 py-4 rounded mr-4" >
-              Empezar
-            </button>
+              <button className="bg-green-500 text-white px-8 py-4 rounded mr-4">
+                Empezar
+              </button>
             </Link>
           </div>
         </div>
         <Footer />
       </div>
-
     </main>
   );
 }
