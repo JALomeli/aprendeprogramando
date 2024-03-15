@@ -52,13 +52,13 @@ function JsExamen1() {
     setAnswers({
       developer: "",
       purpose: "",
-      applications: "",
+      applications: "" ,
     });
   };
 
   return (
     <>
-      <Button className="m-2 bg-red-500" onClick={() => setOpenModal(true)}>
+      <Button className="m-2 bg-red-500 hover:bg-red-700" onClick={() => setOpenModal(true)}>
         Examen
       </Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
@@ -69,7 +69,7 @@ function JsExamen1() {
               Examen lección 1
             </h3>
             <div>
-              <label className="block">
+              <label className="block font-bold">
                 ¿Quién es el desarrollador original de JavaScript?
               </label>
               <div>
@@ -107,7 +107,7 @@ function JsExamen1() {
               </div>
             </div>
             <div>
-              <label className="block">
+              <label className="block font-bold">
                 ¿Cuál fue el propósito inicial de JavaScript cuando fue creado?
               </label>
               <div>
@@ -155,7 +155,7 @@ function JsExamen1() {
               </div>
             </div>
             <div>
-              <label className="block">
+              <label className="block font-bold">
                 ¿En qué tipos de aplicaciones se utiliza comúnmente JavaScript
                 en la actualidad?
               </label>

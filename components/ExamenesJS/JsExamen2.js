@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Modal } from "flowbite-react";
 
+// Corregir la logica de esta seccion en un futuro
+
 function JsExamen2() {
   const [openModal, setOpenModal] = useState(false);
   const [answers, setAnswers] = useState({
@@ -66,7 +68,7 @@ boolean: "boolean",
 
   return (
     <>
-      <Button className="m-2 bg-red-500" onClick={() => setOpenModal(true)}>
+      <Button className="m-2 bg-red-500 hover:bg-red-600" onClick={() => setOpenModal(true)}>
         Examen
       </Button>
       <Modal show={openModal} size="md" onClose={onCloseModal} popup>
@@ -77,7 +79,7 @@ boolean: "boolean",
               Examen lección 2
             </h3>
             <div>
-              <label className="block">
+              <label className="block font-bold">
                 ¿Cuál es la palabra clave utilizada para declarar una variable
                 en JavaScript?
               </label>
@@ -128,7 +130,7 @@ boolean: "boolean",
             </div>
             {/* pregunta  */}
             <div>
-              <label className="block">
+              <label className="block font-bold">
                 ¿Qué tipo de dato se utiliza para almacenar cadenas de texto en
                 JavaScript?
               </label>
@@ -181,7 +183,7 @@ boolean: "boolean",
             {/* pregunta  */}
 
             <div>
-              <label className="block">
+              <label className="block font-bold">
                 ¿Cuál es el operador que se utiliza para determinar el tipo de
                 dato de una variable en JavaScript?
               </label>
@@ -233,7 +235,7 @@ boolean: "boolean",
 
               {/* pregunta  */}
 
-              <label className="block">
+              <label className="block font-bold">
                 ¿Qué palabra clave se utiliza para declarar una variable cuyo
                 valor no cambiará durante la ejecución del programa en
                 JavaScript?
@@ -286,7 +288,7 @@ boolean: "boolean",
 
               {/* pregunta  */}
               <div>
-                <label className="block">
+                <label className="block font-bold">
                   ¿Qué tipo de dato se utiliza para representar valores
                   verdadero/falso en JavaScript?
                 </label>

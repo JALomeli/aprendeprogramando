@@ -62,7 +62,7 @@ export default function JavascriptRecursos() {
             </button>
           </Link>
           <p className="text-2xl  mb-4 mt-4">
-            You Don't Know JS" (Serie) de Kyle Simpson
+          &quot;You Don&apos;t Know JS&quot; (Serie) de Kyle Simpson
           </p>
 
           <img
@@ -72,11 +72,11 @@ export default function JavascriptRecursos() {
           />
           <Link href="https://www.amazon.com.mx/You-Dont-Know-JS-Yet-ebook/dp/B084BNMN7T">
             <button className="bg-green-500 text-white px-8 py-4 rounded m-2 hover:bg-green-600 hover:text-gray-100">
-            You Don't Know JS"  
+            &quot;You Don&apos;t Know JS&quot;  
             </button>
           </Link>
           <p className="text-2xl  mb-4 mt-4">
-            JavaScript: The Good Parts" de Douglas Crockford
+          &quot;JavaScript: The Good Parts&quot; de Douglas Crockford
           </p>
 
           <img
@@ -86,7 +86,7 @@ export default function JavascriptRecursos() {
           />
           <Link href="https://www.amazon.com.mx/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">
             <button className="bg-green-500 text-white px-8 py-4 rounded m-2 hover:bg-green-600 hover:text-gray-100">
-            JavaScript: The Good Parts"
+            &quot;JavaScript: The Good Parts&quot;
             </button>
           </Link>
         </div>

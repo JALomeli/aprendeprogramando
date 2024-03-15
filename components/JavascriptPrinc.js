@@ -1,8 +1,11 @@
 import React from "react";
 import { Accordion } from "flowbite-react";
 import Link from "next/link";
-import JsExamen1 from "../components/JsExamen1";
-import JsExamen2 from "../components/JsExamen2";
+import JsExamen1 from "./ExamenesJS/JsExamen1";
+import JsExamen2 from "./ExamenesJS/JsExamen2";
+import JsExamen3 from "./ExamenesJS/JsExamen3";
+import JsExamen4 from "./ExamenesJS/JsExamen4";
+import JsExamen5 from "./ExamenesJS/JsExamen5";
 
 export default function JavascriptPrinc() {
   return (
@@ -18,8 +21,7 @@ export default function JavascriptPrinc() {
         />
         <p className="m-2 p-2 text-center ">
           Cada vez que termines una leccion, debes de realizar un examen y sacar
-          al menos el 80% de las preguntas correctamente para poder continuar
-          con la siguiente leccion
+          al menos el 80% de las preguntas correctamente para poder aprobar
         </p>
         <Accordion className="w-full max-w-4xl ">
           <Accordion.Panel>
@@ -99,6 +101,7 @@ export default function JavascriptPrinc() {
               Lección 3: Operadores y Expresiones en JavaScript
             </Accordion.Title>
             <Accordion.Content>
+              <div className="flex flex-col">
               <div>
                 <h2 className="text-2xl font-bold mb-2">
                   Operadores Aritméticos
@@ -143,11 +146,8 @@ export default function JavascriptPrinc() {
                   <li>NOT lógico (!)</li>
                 </ul>
               </div>
-              <Link href="/">
-                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
-                  Examen
-                </button>
-              </Link>
+              <JsExamen3/>
+              </div>
             </Accordion.Content>
           </Accordion.Panel>
 
@@ -156,6 +156,7 @@ export default function JavascriptPrinc() {
               Lección 4: Estructuras de Control en JavaScript
             </Accordion.Title>
             <Accordion.Content>
+              <div className="flex flex-col">
               <div>
                 <h2 className="text-2xl font-bold mb-2">Sentencia if</h2>
                 <p>
@@ -176,12 +177,10 @@ export default function JavascriptPrinc() {
                   La sentencia `switch` se utiliza para seleccionar una de
                   muchas partes de código para ser ejecutada.
                 </p>
+                
               </div>
-              <Link href="/">
-                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
-                  Examen
-                </button>
-              </Link>
+              <JsExamen4/>
+              </div>
             </Accordion.Content>
           </Accordion.Panel>
 
@@ -190,6 +189,7 @@ export default function JavascriptPrinc() {
               Lección 5: Funciones en JavaScript
             </Accordion.Title>
             <Accordion.Content>
+              <div className="flex flex-col">
               <div>
                 <h2 className="text-2xl font-bold mb-2">Definir funciones</h2>
                 <p>
@@ -212,17 +212,14 @@ export default function JavascriptPrinc() {
                   clave `return` seguida del valor que se desea devolver.
                 </p>
               </div>
-              <Link href="/">
-                <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
-                  Examen
-                </button>
-              </Link>
+              <JsExamen5/>
+              </div>
             </Accordion.Content>
           </Accordion.Panel>
         </Accordion>
 
         <Link href="/JavascriptExtra">
-          <button className="bg-green-500 text-white px-8 py-4 rounded m-2">
+          <button className="bg-green-500  text-white px-8 py-4 rounded m-2 hover:bg-green-600">
             Recursos adicionales
           </button>
         </Link>
