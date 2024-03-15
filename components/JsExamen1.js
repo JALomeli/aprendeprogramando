@@ -1,80 +1,231 @@
-import { Fragment, useRef, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+import React, { useState } from "react";
+import { Button, Modal } from "flowbite-react";
 
+function JsExamen1() {
+  const [openModal, setOpenModal] = useState(false);
+  const [answers, setAnswers] = useState({
+    developer: "",
+    purpose: "",
+    applications: "",
+  });
+  const [result, setResult] = useState(null);
 
-export default function Example() {
-  const [open, setOpen] = useState(true)
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setAnswers({ ...answers, [name]: value });
+  };
 
-  const cancelButtonRef = useRef(null)
+  const handleSubmit = () => {
+    // Respuestas correctas
+    const correctAnswers = {
+      developer: "Brendan Eich",
+      purpose:
+        "Agregar interactividad a las páginas web en el navegador Netscape Navigator",
+      applications: "En aplicaciones web, móviles, servidores y más",
+    };
+
+    // Verificar las respuestas del usuario
+    const isCorrectDeveloper = answers.developer === correctAnswers.developer;
+    const isCorrectPurpose = answers.purpose === correctAnswers.purpose;
+    const isCorrectApplications =
+      answers.applications === correctAnswers.applications;
+
+    // Contar las respuestas correctas
+    const correctCount = [
+      isCorrectDeveloper,
+      isCorrectPurpose,
+      isCorrectApplications,
+    ].filter((value) => value).length;
+
+    // Calcular el porcentaje de respuestas correctas
+    const percentage =
+      (correctCount / Object.keys(correctAnswers).length) * 100;
+
+    // Mostrar el porcentaje
+    setResult(percentage);
+
+    onCloseModal();
+  };
+
+  const onCloseModal = () => {
+    setOpenModal(false);
+    setAnswers({
+      developer: "",
+      purpose: "",
+      applications: "",
+    });
+  };
 
   return (
-    <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
-        <Transition.Child
-          as={Fragment}
-          enter="ease-out duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-        </Transition.Child>
+    <>
+      <Button className="m-2 bg-red-500" onClick={() => setOpenModal(true)}>
+        Examen
+      </Button>
+      <Modal show={openModal} size="md" onClose={onCloseModal} popup>
+        <Modal.Header />
+        <Modal.Body>
+          <div className="space-y-4">
+            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
+              Examen lección 1
+            </h3>
+            <div>
+              <label className="block">
+                ¿Quién es el desarrollador original de JavaScript?
+              </label>
+              <div>
+                <input
+                  type="radio"
+                  id="developer-brendan"
+                  name="developer"
+                  value="Brendan Eich"
+                  onChange={handleChange}
+                  checked={answers.developer === "Brendan Eich"}
+                />
+                <label htmlFor="developer-brendan">Brendan Eich</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="developer-bernese"
+                  name="developer"
+                  value="Tim Berners-Lee"
+                  onChange={handleChange}
+                  checked={answers.developer === "Tim Berners-Lee"}
+                />
+                <label htmlFor="developer-bernese">Tim Berners-Lee</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="developer-linus"
+                  name="developer"
+                  value="Linus Torvalds"
+                  onChange={handleChange}
+                  checked={answers.developer === "Linus Torvalds"}
+                />
+                <label htmlFor="developer-linus">Linus Torvalds</label>
+              </div>
+            </div>
+            <div>
+              <label className="block">
+                ¿Cuál fue el propósito inicial de JavaScript cuando fue creado?
+              </label>
+              <div>
+                <input
+                  type="radio"
+                  id="purpose-interactivity"
+                  name="purpose"
+                  value="Agregar interactividad a las páginas web en el navegador Netscape Navigator"
+                  onChange={handleChange}
+                  checked={
+                    answers.purpose ===
+                    "Agregar interactividad a las páginas web en el navegador Netscape Navigator"
+                  }
+                />
+                <label htmlFor="purpose-interactivity">
+                  Agregar interactividad a las páginas web en el navegador
+                  Netscape Navigator
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="purpose-mobile"
+                  name="purpose"
+                  value="Desarrollar aplicaciones móviles"
+                  onChange={handleChange}
+                  checked={
+                    answers.purpose === "Desarrollar aplicaciones móviles"
+                  }
+                />
+                <label htmlFor="purpose-mobile">
+                  Desarrollar aplicaciones móviles
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="purpose-os"
+                  name="purpose"
+                  value="Crear sistemas operativos"
+                  onChange={handleChange}
+                  checked={answers.purpose === "Crear sistemas operativos"}
+                />
+                <label htmlFor="purpose-os">Crear sistemas operativos</label>
+              </div>
+            </div>
+            <div>
+              <label className="block">
+                ¿En qué tipos de aplicaciones se utiliza comúnmente JavaScript
+                en la actualidad?
+              </label>
 
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-              enterTo="opacity-100 translate-y-0 sm:scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                  <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                      <ExclamationTriangleIcon className="h-6 w-6 text-red-600" aria-hidden="true" />
-                    </div>
-                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                      <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
-                        Deactivate account
-                      </Dialog.Title>
-                      <div className="mt-2">
-                        <p className="text-sm text-gray-500">
-                          Are you sure you want to deactivate your account? All of your data will be permanently
-                          removed. This action cannot be undone.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                  <button
-                    type="button"
-                    className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
-                    onClick={() => setOpen(false)}
-                  >
-                    Deactivate
-                  </button>
-                  <button
-                    type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                    onClick={() => setOpen(false)}
-                    ref={cancelButtonRef}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </Dialog.Panel>
-            </Transition.Child>
+              <div>
+                <input
+                  type="radio"
+                  id="applications-only-web"
+                  name="applications"
+                  value="Solo en aplicaciones web"
+                  onChange={handleChange}
+                  checked={answers.applications === "Solo en aplicaciones web"}
+                />
+                <label htmlFor="applications-only-web">
+                  Solo en aplicaciones web
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="applications-only-mobile"
+                  name="applications"
+                  value="Solo en aplicaciones móviles"
+                  onChange={handleChange}
+                  checked={
+                    answers.applications === "Solo en aplicaciones móviles"
+                  }
+                />
+                <label htmlFor="applications-only-mobile">
+                  Solo en aplicaciones móviles
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="applications-web"
+                  name="applications"
+                  value="En aplicaciones web, móviles, servidores y más"
+                  onChange={handleChange}
+                  checked={
+                    answers.applications ===
+                    "En aplicaciones web, móviles, servidores y más"
+                  }
+                />
+                <label htmlFor="applications-web">
+                  En aplicaciones web, móviles, servidores y más
+                </label>
+              </div>
+            </div>
           </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleSubmit}>Enviar respuestas</Button>
+        </Modal.Footer>
+      </Modal>
+      {result !== null && (
+        <div>
+          <h3>Resultados:</h3>
+          <p>Porcentaje de respuestas correctas: {result.toFixed(2)}%</p>
+          {result.toFixed(2) >= 80 ? (
+            <p>¡Felicidades! Has aprobado el examen.</p>
+          ) : (
+            <p>
+              Lo siento, no has aprobado el examen. Por favor intenta de nuevo.
+            </p>
+          )}
         </div>
-      </Dialog>
-    </Transition.Root>
-  )
+      )}
+    </>
+  );
 }
+
+export default JsExamen1;
