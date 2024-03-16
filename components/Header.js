@@ -82,10 +82,9 @@ export default function Header() {
 
                 </Link>
               </li>
-              <li>
-   
-                <BtnLogin />
-              </li>
+  <li>
+    <BtnLogin />
+  </li>
             </ul>
            
           </div>
