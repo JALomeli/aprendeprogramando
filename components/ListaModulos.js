@@ -25,7 +25,7 @@ export default function ListaModulos() {
     {
       id: 3,
       name: "CSS",
-      href: "#",
+      href: "/Css",
       imageSrc:
         "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
       imageAlt: "Front of men's Basic Tee in black.",
