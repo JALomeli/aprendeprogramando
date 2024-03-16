@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-
+import BtnLogin from "../components/BtnLogin";
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -83,13 +83,11 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-500 md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:border-gray-700 hover:bg-green-500">
-
-                    Inicia Sesion
-
-                </Link>
+   
+                <BtnLogin />
               </li>
             </ul>
+           
           </div>
         </div>
       </nav>
