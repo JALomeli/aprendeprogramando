@@ -17,7 +17,7 @@ export default function ListaModulosExtra() {
     {
       id: 10,
       name: "HTML",
-      href: "#",
+      href: "/HtmlExtra",
       imageSrc:
         "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
       imageAlt: "Front of men's Basic Tee in black.",
