@@ -6,8 +6,8 @@ function CSSExamen2() {
   const [answers, setAnswers] = useState({
     pregunta1: "",
     pregunta2: "",
-    pregunta3: "",
-    pregunta4: "",
+    // pregunta3: "",
+    // pregunta4: "",
     // pregunta5: "",
   });
   const [result, setResult] = useState(null);
@@ -22,8 +22,8 @@ function CSSExamen2() {
     const correctAnswers = {
       pregunta1: "pregunta1",
       pregunta2: "pregunta2",
-      pregunta3: "pregunta3",
-      pregunta4: "pregunta4",
+    //   pregunta3: "pregunta3",
+    //   pregunta4: "pregunta4",
     //   pregunta5: "pregunta5",
 
     };
@@ -31,8 +31,8 @@ function CSSExamen2() {
     // Verificar las respuestas del usuario
     const isCorrectPregunta1 = answers.pregunta1 === correctAnswers.pregunta1;
     const isCorrectPregunta2 = answers.pregunta2 === correctAnswers.pregunta2;
-    const isCorrectPregunta3 = answers.pregunta3 === correctAnswers.pregunta3;
-    const isCorrectPregunta4 = answers.pregunta4 === correctAnswers.pregunta4;
+    // const isCorrectPregunta3 = answers.pregunta3 === correctAnswers.pregunta3;
+    // const isCorrectPregunta4 = answers.pregunta4 === correctAnswers.pregunta4;
 
     // const isCorrectPregunta5 = answers.pregunta5 === correctAnswers.pregunta5;
 
@@ -40,8 +40,8 @@ function CSSExamen2() {
     const correctCount = [
       isCorrectPregunta1,
       isCorrectPregunta2,
-      isCorrectPregunta3,
-      isCorrectPregunta4,
+    //   isCorrectPregunta3,
+    //   isCorrectPregunta4,
     //   isCorrectPregunta5,
     ].filter((value) => value).length;
 
@@ -60,8 +60,8 @@ function CSSExamen2() {
     setAnswers({
       pregunta1: "",
       pregunta2: "",
-      pregunta3: "",
-      pregunta4: "",
+    //   pregunta3: "",
+    //   pregunta4: "",
     //   pregunta5: "",
     });
   };
@@ -76,11 +76,11 @@ function CSSExamen2() {
         <Modal.Body>
           <div className="space-y-4">
             <h3 className=" text-xl text-bold font-medium text-gray-900 dark:text-white">
-              Examen lección 2
+              Examen lección 1
             </h3>
             <div>
               <label className="block font-bold">
-              ¿Qué función tienen los selectores CSS?
+              ¿Qué permite hacer CSS?
               </label>
               <div>
                 <input
@@ -91,29 +91,7 @@ function CSSExamen2() {
                   onChange={handleChange}
                   checked={answers.pregunta1 === "incorrecta1"}
                 />
-                <label htmlFor="incorrecta">Definir el contenido de una página web. </label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="pregunta1"
-                  name="pregunta1"
-                  value="pregunta1"
-                  onChange={handleChange}
-                  checked={answers.pregunta1 === "pregunta1"}
-                />
-                <label htmlFor="pregunta1">Seleccionar elementos HTML a los que se aplicará un estilo. </label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta2"
-                  name="pregunta1"
-                  value="incorrecta2"
-                  onChange={handleChange}
-                  checked={answers.pregunta1 === "incorrecta2"}
-                />
-                <label htmlFor="var-linus"> Controlar el comportamiento de formularios en línea.</label>
+                <label htmlFor="incorrecta">Controlar el comportamiento de la lógica del lado del servidor. </label>
               </div>
               <div>
                 <input
@@ -124,13 +102,35 @@ function CSSExamen2() {
                   onChange={handleChange}
                   checked={answers.pregunta1 === "incorrecta3"}
                 />
-                <label htmlFor="incorrecta3">Crear estructuras de datos en una página web.</label>
+                <label htmlFor="incorrecta3">Definir el contenido y la estructura de una página web. </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="incorrecta2"
+                  name="pregunta1"
+                  value="incorrecta2"
+                  onChange={handleChange}
+                  checked={answers.pregunta1 === "incorrecta2"}
+                />
+                <label htmlFor="var-linus"> Cambiar la funcionalidad de los elementos interactivos de una página.</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="pregunta1"
+                  name="pregunta1"
+                  value="pregunta1"
+                  onChange={handleChange}
+                  checked={answers.pregunta1 === "pregunta1"}
+                />
+                <label htmlFor="pregunta1">Controlar el diseño, el formato y el aspecto visual de una página web.</label>
               </div>
             </div>
             {/* pregunta  */}
             <div>
               <label className="block font-bold">
-              ¿Qué es una regla CSS?
+              ¿Cuál es el propósito principal de CSS?
               </label>
               <div>
                 <input
@@ -141,7 +141,7 @@ function CSSExamen2() {
                   onChange={handleChange}
                   checked={answers.pregunta2 === "incorrecta1"}
                 />
-                <label htmlFor="incorrecta1"> Un tipo de etiqueta HTML.</label>
+                <label htmlFor="incorrecta1">Manipular datos en una página web.</label>
               </div>
               <div>
                 <input
@@ -152,7 +152,7 @@ function CSSExamen2() {
                   onChange={handleChange}
                   checked={answers.pregunta2 === "incorrecta2"}
                 />
-                <label htmlFor="incorrecta2">Una función de JavaScript para manipular datos.</label>
+                <label htmlFor="incorrecta2">Controlar el comportamiento de los formularios en línea.</label>
               </div>
               <div>
                 <input
@@ -163,7 +163,7 @@ function CSSExamen2() {
                   onChange={handleChange}
                   checked={answers.pregunta2 === "pregunta2"}
                 />
-                <label htmlFor="pregunta2"> Una declaración de estilo aplicada a un elemento HTML.</label>
+                <label htmlFor="pregunta2">  Dar estilo y presentación a documentos HTML.</label>
               </div>
               <div>
                 <input
@@ -174,111 +174,10 @@ function CSSExamen2() {
                   onChange={handleChange}
                   checked={answers.pregunta2 === "incorrecta"}
                 />
-                <label htmlFor="incorrecta">Una técnica para controlar la lógica del lado del servidor.</label>
+                <label htmlFor="incorrecta">Gestionar la lógica del lado del servidor.</label>
               </div>
             </div>
-            {/* pregunta  */}
-            <div>
-              <label className="block font-bold">
-              En el siguiente ejemplo, ¿qué elemento HTML se seleccionará y se le aplicará un color azul? 
-              </label>
-              <code className="block font-bold"> p {"{"} color: blue;{"}"} </code>
-              <div>
-                <input
-                  type="radio"
-                  id="pregunta3"
-                  name="pregunta3"
-                  value="pregunta3"
-                  onChange={handleChange}
-                  checked={answers.pregunta3 === "pregunta3"}
-                />
-                <label htmlFor="pregunta3"> Todos los elementos de párrafo (&lt;p&gt;) en la página.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta1"
-                  name="pregunta3"
-                  value="incorrecta1"
-                  onChange={handleChange}
-                  checked={answers.pregunta3 === "incorrecta1"}
-                />
-                <label htmlFor="incorrecta1">Todos los elementos de párrafo (&lt;h1&gt;,&lt;h2&gt;,etc) en la página.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="pregunta2"
-                  name="pregunta3"
-                  value="pregunta2"
-                  onChange={handleChange}
-                  checked={answers.pregunta3 === "pregunta2"}
-                />
-                <label htmlFor="pregunta2"> Todos los elementos de párrafo (&lt;ul&gt;,&lt;ol&gt;,&lt;li&gt;) en la página.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta3"
-                  name="pregunta3"
-                  value="incorrecta3"
-                  onChange={handleChange}
-                  checked={answers.pregunta3 === "incorrecta3"}
-                />
-                <label htmlFor="incorrecta3"> Todos los elementos de párrafo (&lt;img&gt;) en la página.</label>
-              </div>
-            </div>
-            {/* pregunta  */}
-            <div>
-              <label className="block font-bold">
-              ¿Cuál es la estructura básica de una regla CSS?
-              </label>
 
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta1"
-                  name="pregunta4"
-                  value="incorrecta1"
-                  onChange={handleChange}
-                  checked={answers.pregunta4 === "incorrecta1"}
-                />
-                <label htmlFor="incorrecta1"> Selector único.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="pregunta4"
-                  name="pregunta4"
-                  value="pregunta4"
-                  onChange={handleChange}
-                  checked={answers.pregunta4 === "pregunta4"}
-                />
-                <label htmlFor="pregunta4">Selector seguido de un conjunto de propiedades de estilo.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta2"
-                  name="pregunta4"
-                  value="incorrecta2"
-                  onChange={handleChange}
-                  checked={answers.pregunta4 === "incorrecta2"}
-                />
-                <label htmlFor="pregunta2"> Nombre de la clase seguido de un identificador único.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta3"
-                  name="pregunta4"
-                  value="incorrecta3"
-                  onChange={handleChange}
-                  checked={answers.pregunta4 === "incorrecta3"}
-                />
-                <label htmlFor="incorrecta3"> Palabra clave seguida de una expresión booleana.</label>
-              </div>
-            </div>
    
           </div>
         </Modal.Body>

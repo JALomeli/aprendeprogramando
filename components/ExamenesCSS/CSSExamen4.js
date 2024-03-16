@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Button, Modal } from "flowbite-react";
 
-function CSSExamen4() {
+function CSSExamen2() {
   const [openModal, setOpenModal] = useState(false);
   const [answers, setAnswers] = useState({
     pregunta1: "",
     pregunta2: "",
-    pregunta3: "",
+    // pregunta3: "",
     // pregunta4: "",
     // pregunta5: "",
   });
@@ -22,8 +22,8 @@ function CSSExamen4() {
     const correctAnswers = {
       pregunta1: "pregunta1",
       pregunta2: "pregunta2",
-      pregunta3: "pregunta3",
-      // pregunta4: "pregunta4",
+    //   pregunta3: "pregunta3",
+    //   pregunta4: "pregunta4",
     //   pregunta5: "pregunta5",
 
     };
@@ -31,7 +31,7 @@ function CSSExamen4() {
     // Verificar las respuestas del usuario
     const isCorrectPregunta1 = answers.pregunta1 === correctAnswers.pregunta1;
     const isCorrectPregunta2 = answers.pregunta2 === correctAnswers.pregunta2;
-    const isCorrectPregunta3 = answers.pregunta3 === correctAnswers.pregunta3;
+    // const isCorrectPregunta3 = answers.pregunta3 === correctAnswers.pregunta3;
     // const isCorrectPregunta4 = answers.pregunta4 === correctAnswers.pregunta4;
 
     // const isCorrectPregunta5 = answers.pregunta5 === correctAnswers.pregunta5;
@@ -40,8 +40,8 @@ function CSSExamen4() {
     const correctCount = [
       isCorrectPregunta1,
       isCorrectPregunta2,
-      isCorrectPregunta3,
-      // isCorrectPregunta4,
+    //   isCorrectPregunta3,
+    //   isCorrectPregunta4,
     //   isCorrectPregunta5,
     ].filter((value) => value).length;
 
@@ -60,8 +60,8 @@ function CSSExamen4() {
     setAnswers({
       pregunta1: "",
       pregunta2: "",
-      pregunta3: "",
-      // pregunta4: "",
+    //   pregunta3: "",
+    //   pregunta4: "",
     //   pregunta5: "",
     });
   };
@@ -76,11 +76,11 @@ function CSSExamen4() {
         <Modal.Body>
           <div className="space-y-4">
             <h3 className=" text-xl text-bold font-medium text-gray-900 dark:text-white">
-              Examen lección 4
+              Examen lección 1
             </h3>
             <div>
               <label className="block font-bold">
-              ¿Qué representa el modelo de caja en CSS?
+              ¿Qué permite hacer CSS?
               </label>
               <div>
                 <input
@@ -91,29 +91,7 @@ function CSSExamen4() {
                   onChange={handleChange}
                   checked={answers.pregunta1 === "incorrecta1"}
                 />
-                <label htmlFor="incorrecta"> Cómo se estructuran los elementos HTML en una página web. </label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="pregunta1"
-                  name="pregunta1"
-                  value="pregunta1"
-                  onChange={handleChange}
-                  checked={answers.pregunta1 === "pregunta1"}
-                />
-                <label htmlFor="pregunta1">Cómo se representan y se manipulan los elementos HTML en una página web. </label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta2"
-                  name="pregunta1"
-                  value="incorrecta2"
-                  onChange={handleChange}
-                  checked={answers.pregunta1 === "incorrecta2"}
-                />
-                <label htmlFor="incorrecta2"> La capacidad de una página web para adaptarse a diferentes dispositivos.</label>
+                <label htmlFor="incorrecta">Controlar el comportamiento de la lógica del lado del servidor. </label>
               </div>
               <div>
                 <input
@@ -124,13 +102,35 @@ function CSSExamen4() {
                   onChange={handleChange}
                   checked={answers.pregunta1 === "incorrecta3"}
                 />
-                <label htmlFor="incorrecta3">  El proceso de dar estilo al texto y al fondo en una página web.</label>
+                <label htmlFor="incorrecta3">Definir el contenido y la estructura de una página web. </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="incorrecta2"
+                  name="pregunta1"
+                  value="incorrecta2"
+                  onChange={handleChange}
+                  checked={answers.pregunta1 === "incorrecta2"}
+                />
+                <label htmlFor="var-linus"> Cambiar la funcionalidad de los elementos interactivos de una página.</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="pregunta1"
+                  name="pregunta1"
+                  value="pregunta1"
+                  onChange={handleChange}
+                  checked={answers.pregunta1 === "pregunta1"}
+                />
+                <label htmlFor="pregunta1">Controlar el diseño, el formato y el aspecto visual de una página web.</label>
               </div>
             </div>
             {/* pregunta  */}
             <div>
               <label className="block font-bold">
-              ¿Qué es el diseño responsivo en CSS?
+              ¿Cuál es el propósito principal de CSS?
               </label>
               <div>
                 <input
@@ -141,18 +141,7 @@ function CSSExamen4() {
                   onChange={handleChange}
                   checked={answers.pregunta2 === "incorrecta1"}
                 />
-                <label htmlFor="incorrecta1"> La técnica para establecer la ubicación de los elementos HTML en una página web.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="pregunta2"
-                  name="pregunta2"
-                  value="pregunta2"
-                  onChange={handleChange}
-                  checked={answers.pregunta2 === "pregunta2"}
-                />
-                <label htmlFor="pregunta2">La capacidad de una página web para adaptarse a diferentes dispositivos y tamaños de pantalla.</label>
+                <label htmlFor="incorrecta1">Manipular datos en una página web.</label>
               </div>
               <div>
                 <input
@@ -163,7 +152,18 @@ function CSSExamen4() {
                   onChange={handleChange}
                   checked={answers.pregunta2 === "incorrecta2"}
                 />
-                <label htmlFor="incorrecta2"> El proceso de dar estilo a los elementos HTML utilizando propiedades como color y fondo.</label>
+                <label htmlFor="incorrecta2">Controlar el comportamiento de los formularios en línea.</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="pregunta2"
+                  name="pregunta2"
+                  value="pregunta2"
+                  onChange={handleChange}
+                  checked={answers.pregunta2 === "pregunta2"}
+                />
+                <label htmlFor="pregunta2">  Dar estilo y presentación a documentos HTML.</label>
               </div>
               <div>
                 <input
@@ -174,64 +174,10 @@ function CSSExamen4() {
                   onChange={handleChange}
                   checked={answers.pregunta2 === "incorrecta"}
                 />
-                <label htmlFor="incorrecta">La estructura básica de una página web, incluyendo etiquetas como &lt;html&gt;, &lt;head&gt; y &lt;body&gt;.</label>
+                <label htmlFor="incorrecta">Gestionar la lógica del lado del servidor.</label>
               </div>
             </div>
-            {/* pregunta  */}
-            <div>
-              <label className="block font-bold">
-              EEn el siguiente ejemplo, ¿qué propiedad se está aplicando al elemento &lt;div&gt; cuando la pantalla tiene un ancho máximo de 600px?
-              </label>
-              <code className="block font-bold">   @media screen and (max-width: 600px) {"{"} div {"{"} width: 100%;{"}"}{"}"} </code>
-              <div>
-                <input
-                  type="radio"
-                  id="pregunta3"
-                  name="pregunta3"
-                  value="pregunta3"
-                  onChange={handleChange}
-                  checked={answers.pregunta3 === "pregunta3"}
-                />
-                <label htmlFor="pregunta3"> Ancho de la caja.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta1"
-                  name="pregunta3"
-                  value="incorrecta1"
-                  onChange={handleChange}
-                  checked={answers.pregunta3 === "incorrecta1"}
-                />
-                <label htmlFor="incorrecta1">Altura de la caja.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="pregunta2"
-                  name="pregunta3"
-                  value="pregunta2"
-                  onChange={handleChange}
-                  checked={answers.pregunta3 === "pregunta2"}
-                />
-                <label htmlFor="pregunta2"> Borde de la caja.</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="incorrecta3"
-                  name="pregunta3"
-                  value="incorrecta3"
-                  onChange={handleChange}
-                  checked={answers.pregunta3 === "incorrecta3"}
-                />
-                <label htmlFor="incorrecta3"> Tamaño de fuente.</label>
-              </div>
-            </div>
-            {/* pregunta  */}
-      
 
-           
    
           </div>
         </Modal.Body>
@@ -256,4 +202,4 @@ function CSSExamen4() {
   );
 }
 
-export default CSSExamen4;
+export default CSSExamen2;
